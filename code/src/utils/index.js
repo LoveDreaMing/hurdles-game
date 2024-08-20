@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { hurdleMinDistance } from '../configs/index';
 
 /**
- * 生成新的跨栏模型并将其添加到场景中。
+ * 生成新的跨栏
  *
  * @param {Object} oldModel - 要克隆的原始跨栏模型。
  * @param {Array} hurdleArr - 现有跨栏模型的数组。
@@ -23,7 +23,7 @@ export function generateHurdles(oldModel, hurdleArr, scene) {
 }
 
 /**
- * 根据摄像机的位置更新轨道段。
+ * 更新跑道位置
  *
  * @param {Object} camera - 具有位置属性的摄像机对象。
  * @param {Array} trackArr - 具有位置属性的轨道段对象数组。
@@ -52,7 +52,7 @@ export function updateTrack(camera, trackArr, trackWidth) {
 }
 
 /**
- * 根据当前动作和动画状态更新角色的位置。
+ * 人物跳跃时，更新人物Y轴位置
  *
  * @param {Object} animationMixer - 动画混合器对象。
  * @param {Object} clock - 用于获取增量时间的时钟对象。
@@ -83,7 +83,7 @@ export function updateCharacterPosition(
 }
 
 /**
- * 检测角色是否与跨栏发生了碰撞。
+ * 检测人物是否与跨栏发生了碰撞
  *
  * @param {Object} characterGroup - 角色组对象。
  * @param {Object} characterBoundingBox - 角色的边界框对象。
